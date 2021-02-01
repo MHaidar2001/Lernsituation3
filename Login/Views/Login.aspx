@@ -12,26 +12,40 @@
     <title>Login</title>
 </head>
 <body>
-    <form id="form1" class="" runat="server">
-        <h1 class="col-sm-10">Login</h1>
-        <asp:Label ID="Label3" runat="server" CssClass="alert alert-danger" Text=""></asp:Label>
-       <div class="form-group col-sm-10">
-        <asp:Label ID="Label2"  runat="server" Text="User"></asp:Label>
+    <form id="form1"  runat="server">
+          <div class="container">
+        <div class="row p-2">
+            <div class="col-lg-4 offset-lg-4 bg-light text-dark mt-4 p-3 rounded">
+             <h1 class="p-2"> Login</h1>
+             <hr class="bg-light"/>
+                <asp:Label ID="Label3" runat="server" CssClass="alert alert-danger text-center" Text=""></asp:Label>
 
-          <div class="col-sm-10">
-              <asp:TextBox ID="TxtUser" runat="server" Height="31px" Width="224px" CssClass="form-control"></asp:TextBox>
-          </div>
+             <hr runat="server" id="fehlerline" class="bg-light"/>
+
+                <div class="form-group"> 
+                <label for="name">Anmeldename/E-Mail</label>
+                  <asp:TextBox ID="TxtUser" runat="server" Height="31px" Width="224px"   CssClass="form-control"></asp:TextBox>
+                </div>
+
+                 <div class="form-group"> 
+                <label for="name">Kennwort</label>
+                  <asp:TextBox ID="txtpass" runat="server" Height="31px" Width="224px" CssClass="form-control"></asp:TextBox>
+                </div>
+
+                <div class="form-group">
+                   <asp:Button CssClass="btn btn-primary col-sm-10" ID="Button1" runat="server" Text="Login" Height="36px" Width="133px" OnClick="Button1_Click" />
+                </div>
+
+                
+
+               
+             
+            </div>
+        
         </div>
+    </div>
+       </form>
 
-
-        <div class="form-group col-sm-10">
-            <asp:Label ID="Label1" runat="server" Text="Passwort"></asp:Label>
-          <div class=" col-sm-10">
-              <asp:TextBox ID="txtpass" runat="server" Height="31px" Width="224px" CssClass="form-control"></asp:TextBox>
-          </div>
-        </div>
-        <asp:Button CssClass="btn btn-primary col-sm-10" ID="Button1" runat="server" Text="Login" Height="36px" Width="133px" OnClick="Button1_Click" />
-    </form>
 </body>
 
 </html>

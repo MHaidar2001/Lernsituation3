@@ -20,6 +20,8 @@ namespace Login.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             Label3.Visible = false;
+            fehlerline.Visible = false;
+
 
         }
 
@@ -30,17 +32,21 @@ namespace Login.Views
             if (index == "0")
             {
                 Label3.Visible = true;
-                Label3.Text = "gültige Anmeldedaten. Versuchen Sie es noch einmal!";
+                Label3.Text = "Ungültige Anmeldedaten. Versuchen Sie es noch einmal!";
+                fehlerline.Visible = true;
             }
             else if (index == "1")
             {
-                
+                Response.Redirect("https://localhost:44380/Views/Gate");
 
             }
             else if (index=="3")
             {
                 Label3.Visible = true;
-                Label3.Text = "Datenbank nicht erreichba";
+                Label3.Text = "Datenbank nicht erreichbar";
+
+                fehlerline.Visible = true;
+
 
             }
         }

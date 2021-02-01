@@ -33,13 +33,13 @@ namespace Login.Views
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Label2-Steuerelement
+        /// fehlerline-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fehlerline;
 
         /// <summary>
         /// TxtUser-Steuerelement
@@ -49,15 +49,6 @@ namespace Login.Views
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtUser;
-
-        /// <summary>
-        /// Label1-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// txtpass-Steuerelement
