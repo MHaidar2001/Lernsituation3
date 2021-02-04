@@ -12,6 +12,7 @@ namespace Login.Views
         private controller _verwalter;
 
         public controller Verwalter { get => _verwalter; set => _verwalter = value; }
+        
         public Login()
         {
             Verwalter = Global.Verwalter;
@@ -34,18 +35,22 @@ namespace Login.Views
                 Label3.Visible = true;
                 Label3.Text = "Ungültige Anmeldedaten. Versuchen Sie es noch einmal!";
                 fehlerline.Visible = true;
+
             }
             else if (index == "1")
             {
-                Response.Redirect("https://localhost:44380/Views/Gate");
+                string username = TxtUser.Text;
+                Verwalter.Newsession(TxtUser.Text);
+                Response.Redirect("http://localhost:44380/Views/Gate");
 
             }
             else if (index=="3")
             {
                 Label3.Visible = true;
                 Label3.Text = "Datenbank nicht erreichbar";
-
+                
                 fehlerline.Visible = true;
+
 
 
             }

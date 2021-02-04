@@ -9,10 +9,30 @@ namespace Gate.Controllers
 {
     public class MessageController : ApiController
     {
-        // GET: api/Message
-        public IEnumerable<string> Get()
+        #region Eigenschaften
+        private controller _verwalter;
+
+        #endregion
+
+        #region Accessoren/Modifier
+        public controller Verwalter { get => _verwalter; set => _verwalter = value; }
+
+        #endregion
+
+        #region Konstruktoren
+        public MessageController():base()
         {
-            return new string[] { "value1", "value2" };
+            Verwalter = Global.Verwalter;
+        }
+        #endregion
+
+        #region Worker
+        // GET: api/Message
+        public string Get(string user="" )
+        {
+
+            Verwalter.SessionErstellen(user);
+            return user;
         }
 
         // GET: api/Message/5
@@ -35,5 +55,8 @@ namespace Gate.Controllers
         public void Delete(int id)
         {
         }
+        #endregion
     }
+        
+        
 }

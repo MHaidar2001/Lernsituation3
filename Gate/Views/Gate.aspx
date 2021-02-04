@@ -16,8 +16,15 @@
     <form id="form1" runat="server">
         <div>
               <div class="jumbotron">
-              <h1>Turnierverwaltung</h1>
-                <asp:Button ID="Button1" class="btn btn-primary btn-lg btn-block"  runat="server" Text="Login" Height="45px" Width="170px" />
+                  <div class="col-lg-6">
+                      <h1>
+                          <asp:Label ID="Label1" runat="server" Text="Turnierverwaltung"></asp:Label></h1>
+
+
+
+                  </div>
+                 
+                <asp:Button ID="Button1" class="btn btn-primary btn-lg btn-block"  runat="server" Text="Login" Height="45px" Width="170px" OnClick="Button1_Click" />
                 <br />
             </div>
         </div>

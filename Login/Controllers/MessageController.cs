@@ -13,7 +13,6 @@ namespace Login.Controllers
         // GET: api/Message
         public string Get(string name="",string passwort="")
         {
-            int x = 0;
             MySqlConnection Conn = new MySqlConnection();
             string MyConnectionString = "Server=localhost;Port=3307;Database=loginverwaltung; Uid =user;Password=user";
             string sql = "SELECT COUNT( * )FROM `login` WHERE `Username` = '" + name + "'AND `passwort` = '" + passwort+ "'";
@@ -36,7 +35,7 @@ namespace Login.Controllers
 
             string index = command.ExecuteScalar().ToString();
 
-            return x.ToString();
+            return index.ToString();
         }
 
         // GET: api/Message/5
